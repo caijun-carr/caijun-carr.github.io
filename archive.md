@@ -2,7 +2,7 @@
 layout: page
 title: "列表"
 description: "在这里，你能找到我给你的所有诚意"
-header-img: "/img/orange.jpg"
+header-img: "http://oogbkd3ln.bkt.clouddn.com/orange.jpg"
 ---
 
 

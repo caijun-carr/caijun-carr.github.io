@@ -1,31 +1,31 @@
 # Site settings
 title: 个人博客
-header-img: "img/green.jpg"
-tagline: "cn"  
-description: "蔡军的博客"  
+header-img: "http://oogbkd3ln.bkt.clouddn.com/green.jpg"
+tagline: "cn"
+description: "蔡军的博客"
 baseurl: ""
-url: "caijun_carr.github.io"  
+url: "caijun_carr.github.io"
 
 # About/contact
-owner: 
+owner:
   name: " caijun"
   email: caijun_carr@163.com
   bio: "世界很大，做自己就好"
 
 # Data
-gavatar: img/cnfeat.jpg
-favicon: img/favicon.png
+gavatar: http://oogbkd3ln.bkt.clouddn.com/caijun.jpg
+favicon: http://oogbkd3ln.bkt.clouddn.com/favicon.png
 
-douban_username:  
-twitter_username: 
-github_username: 
-facebook_username: 
-weibo_username: 
-zhihu_username: 
+douban_username:
+twitter_username:
+github_username:
+facebook_username:
+weibo_username:
+zhihu_username:
 
-# Build settings  
-# use Github Flavored Markdown !important  
-# document: http://jekyllrb.com/docs/configuration/#kramdown  
+# Build settings
+# use Github Flavored Markdown !important
+# document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
@@ -39,24 +39,25 @@ timezone: Asia/Shanghai
 # Defaults for posts
 defaults:
   -
-    scope: 
+    scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
       author: "caijun"
-      header-img: "img/green.jpg" # We don't want posts without a header image, that whould mean white on white
+      comments: true
+      header-img: "http://oogbkd3ln.bkt.clouddn.com/green.jpg" # We don't want posts without a header image, that whould mean white on white
 
-# Comments 
+# Comments
 comments :
   provider : duoshuo
   duoshuo :
-    short_name : 
+    short_name :
   disqus :
-      short_name : 
+      short_name :
 
 # Analytics and webmaster tools stuff goes here
-google_analytics: 
+google_analytics:
 google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:

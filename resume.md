@@ -2,7 +2,7 @@
 layout: page
 title: "简历"
 description: "个人简历，会不定时更新"
-header-img: "/img/zhihu.jpg"
+header-img: "http://oogbkd3ln.bkt.clouddn.com/zhihu.jpg"
 ---
 
 ## 联系方式
