@@ -46,7 +46,7 @@ defaults:
       layout: "post"
       author: "caijun"
       comments: true
-      header-img: "http://oogbkd3ln.bkt.clouddn.com/green.jpg" # We don't want posts without a header image, that whould mean white on white
+      header-img: "http://oogbkd3ln.bkt.clouddn.com/facebook.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # Comments
 comments :
