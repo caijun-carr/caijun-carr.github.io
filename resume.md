@@ -46,7 +46,7 @@ header-img: "http://oogbkd3ln.bkt.clouddn.com/zhihu.jpg"
 - 设置和高级功能及功能展示界面重构
 
 技术收获：
-- 通过解决安全锁屏复杂的滑动冲突熟悉View触摸事件的传递
+- 通过解决安全锁屏滑动冲突熟悉View触摸事件的传递
 - 因为经常需要使用自定义View熟悉View的绘制流程
 - 由于项目多次使用悬浮窗了解到安卓悬浮窗机制及window常用属性
 - 接入google play内购机制熟悉google play内购接口
