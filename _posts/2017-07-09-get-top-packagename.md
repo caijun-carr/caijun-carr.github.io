@@ -31,9 +31,9 @@ private ComponentName getTopApp(Context context) {
 上面说到了，5.0以上想和5.0以前一样获取栈顶必须要申请PACKAGE_USAGE_STATS这个权限
 
 先看如何申请权限：
-1. 首先AndroidManifest同样需要申请
+1. 首先AndroidManifest同样需要申请：
 ```java
-<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+ < uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" / >
 ```
 1. 检测是否已经有权限：
 ```java
@@ -45,8 +45,8 @@ long startTime = calendar.getTimeInMillis();
 List<UsageStats> usageStatsList = usm.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime);
 // usageStatsList返回的size不为0则认为有权限，为0则认为没有权限
 ```
-
 1. 申请权限跳转到设置的代码：
+
 ```java
 Intent intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS);
 context.startActivity(intent);
