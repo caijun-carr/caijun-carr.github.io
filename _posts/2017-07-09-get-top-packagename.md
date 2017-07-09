@@ -46,7 +46,6 @@ List<UsageStats> usageStatsList = usm.queryUsageStats(UsageStatsManager.INTERVAL
 // usageStatsList返回的size不为0则认为有权限，为0则认为没有权限
 ```
 1. 申请权限跳转到设置的代码：
-
 ```java
 Intent intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS);
 context.startActivity(intent);
