@@ -26,6 +26,25 @@ header-img: "http://oogbkd3ln.bkt.clouddn.com/zhihu.jpg"
 
 ### 广州市久邦数码科技有限公司（ 2015年6月 ~ 至今 ）
 
+**[Multi Calculator](https://play.google.com/store/apps/details?id=com.gomo.calculator&hl=zh-CN "项目地址（上线google play，需翻墙）")**
+
+2017年6月份新成立的项目，主打简单便捷的多功能计算器。因为项目成立不久，逻辑和功能都相对比较简单。
+
+技术要点：
+- 使用悬浮窗实现便捷的悬浮计算器功能
+- 通过特殊手段在悬浮窗上监听用户横竖屏以避免悬浮计算器打扰用户
+- 通过多个进程机制使应用所占内存尽可能小的情况下保证后台任务执行
+
+负责模块：
+- 计算器主界面交互逻辑和动画
+- 悬浮窗计算器框架和拖拽回弹等交互
+- 部分商业化板块
+
+技术收获：
+- 更加熟悉悬浮层相关属性和限制
+- 因为历史界面和计算界面的无缝切换更加熟悉涉及到的触摸事件传递和相关动画等
+
+
 **[AppLock Pro](https://play.google.com/store/apps/details?id=com.jiubang.alock "项目地址（上线google play，需翻墙）")、[Privacy Butler](https://play.google.com/store/apps/details?id=com.tineetech.privacy "项目地址（上线google play，需翻墙）")**
 
 2015年12月开始参与AppLock项目，作为开发之一我在这个项目里面一般主要负责ui层和逻辑层的处理。在项目组里按照以功能模块为单位迭代开发的工作方式形成了模块化分层开发的思维习惯，能较好的配合团队开发。AppLock Pro是日活过百万产品，Privacy Butler是使用了Material Design设计语言的AppLock Pro重构版本。
@@ -60,7 +79,6 @@ header-img: "http://oogbkd3ln.bkt.clouddn.com/zhihu.jpg"
 - 使用3D引擎实现桌面各种特效
 - 通过动态高斯模糊效果实现毛玻璃效果
 - 以.apk的形式支持主题更换
-- 支持根据壁纸颜色深浅动态改变字体颜色
 
 ### 北京觅我信息技术有限公司-实习（ 2014年12月 ~ 2015年5月 ）
 
@@ -82,7 +100,7 @@ header-img: "http://oogbkd3ln.bkt.clouddn.com/zhihu.jpg"
 
 技术要点：
 - 使用LoaderManager实现数据的查询与监测
-- 使用FloatingGroupExpandableListView实现滚蛋距离与actionbar的透明度的联动
+- 使用FloatingGroupExpandableListView实现滚动距离与actionbar的透明度的联动
 - 使用ValueAnimator实现主界面，通知管理和自启管理页面的动画
 
 ---
