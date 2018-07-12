@@ -67,4 +67,8 @@ description: 解决了系统sp在跨进程使用的时候会出现各种问题�
 
 **3.跨进程数据变更的回调**
 
-通过注册ContentProvider的registerContentObserver，指定uri的值在ContentProvider中调用getContext().getContentResolver().notifyChange(uri, null);就能解决跨进程回调的问题了。
+通过注册ContentProvider的registerContentObserver，指定uri的值在ContentProvider中调用getContext().getContentResolver().notifyChange(uri, null);就能解决跨进程回调的问题了。同时还自己定义了registerOnSharedPreferenceChangeListener，可以使用强引用来解决回调可能被回收的问题，当然必须要及时调用unregisterOnSharedPreferenceChangeListener方法，不然可能会造成内存泄露。
+
+### 解决问题的代码
+
+自己做的了一个按照上面是思路做的demo，链接是：[MultiSpDemo](https://github.com/caijun-carr/MultiSpDemo)
