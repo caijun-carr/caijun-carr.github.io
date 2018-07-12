@@ -71,4 +71,4 @@ description: 解决了系统sp在跨进程使用的时候会出现各种问题�
 
 ### 解决问题的代码
 
-自己做的了一个按照上面是思路做的demo，链接是：[MultiSpDemo](https://github.com/caijun-carr/MultiSpDemo)
+自己做的了一个按照上面是思路做的demo，链接是：<a href="https://github.com/caijun-carr/MultiSpDemo" target="_blank">MultiSpDemo</a>
