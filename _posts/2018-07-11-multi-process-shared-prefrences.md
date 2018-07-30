@@ -12,7 +12,7 @@ description: 解决了系统sp在跨进程使用的时候会出现各种问题�
 
 在讨论这些问题之前先要了解系统sp的一些特点。
 
-系统的sp是自带了一个缓存的机制的，在ContextImpl里有个static的的ArrayMap保存了获取过的SharedPreferences对象，在写入和读取的时候会先从这个缓存里读取SharedPreferences对象进行操作。另外SharedPreferences的registerOnSharedPreferenceChangeListener方法注册变更回调的时候，存储的回调是用的WeakHashMap保存的，在GC回收以后，会把这个注册过的回调清空导致有变更的时候不会执行回调。
+系统的sp是自带了一个缓存的机制的，在ContextImpl里有个static的的ArrayMap保存了获取过的SharedPreferences对象，在写入和读取的时候会先从这个缓存里读取SharedPreferences对象进行操作。
 
 **1.内容更新不及时**
 
@@ -46,11 +46,6 @@ description: 解决了系统sp在跨进程使用的时候会出现各种问题�
 
 这个问题貌似除了通过AIDL等跨进程的方式，协同在一个进程里操作好像也没有很好的解决方法。不过如果是普通的类似设置类的操作，在其他的进程几乎只读取不写入的方式几乎不会影响到。
 
-**3.变更无法及时收到回调**
-
-上面分析了registerOnSharedPreferenceChangeListener方法注册变更回调的时候，存储的回调是用的WeakHashMap保存的，在GC回收以后，会把这个注册过的回调清空导致有变更的时候不会执行回调。
-
-但是这只是在同一个进程存在的问题，不同的进程注册这个就算回调没有被回收掉也同样收不到变更的回调。系统的SharedPreferences就没有通知过其他进程。
 
 ### 解决上面这些问题
 
@@ -67,7 +62,7 @@ description: 解决了系统sp在跨进程使用的时候会出现各种问题�
 
 **3.跨进程数据变更的回调**
 
-通过注册ContentProvider的registerContentObserver，指定uri的值在ContentProvider中调用getContext().getContentResolver().notifyChange(uri, null);就能解决跨进程回调的问题了。同时还自己定义了registerOnSharedPreferenceChangeListener，可以使用强引用来解决回调可能被回收的问题，当然必须要及时调用unregisterOnSharedPreferenceChangeListener方法，不然可能会造成内存泄露。
+通过注册ContentProvider的registerContentObserver，指定uri的值在ContentProvider中调用getContext().getContentResolver().notifyChange(uri, null);就能解决跨进程回调的问题了。
 
 ### 解决问题的代码
 
